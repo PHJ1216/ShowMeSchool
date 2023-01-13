@@ -1,0 +1,136 @@
+{% load static %}
+{% load django_bootstrap5 %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .wrap {
+            position: relative;
+            min-height: 100%;
+            padding-bottom: 114px;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            background-color: lavender;
+            width: 100%;
+            border-radius: 0px 60px 0px 0px;
+             text-align: center;
+        }
+    </style>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</head>
+<body style="background : rgba(255, 255, 255, 0.91);">
+<div class="wrap">
+
+    <div>
+        <div style=" border:4px solid mediumpurple; background-color: mediumpurple">
+            <!--검색-->
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search"
+                       aria-label="Search"
+                       style="height: 60px ;background-color: floralwhite ;">
+                <button class="btn btn-outline-success" type="submit" style="height: 60px ;background-color: lavender">
+                    Search
+                </button>
+            </form>
+            <!-- 검색 -->
+        </div>
+        <!--네비바-->
+        <div style="background-color:#7c1772;height: 110px ;border-radius: 0px 0px 0px 60px;">
+            <img src="{% static 'images/logo.png' %}" width="280px" height="70px"
+                 style="margin-left: 15px;margin-top: 6px"></div>
+        <!--네비바-->
+    </div>
+    <!--사이드바-->
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark"
+                 style="border-top: 7px solid black;border-bottom: 9px solid black;margin:2% 0% 0% 2%">
+                <div class="dropdown pb-4">
+                    <a href="#" class="d-flex align-items-center text-#ef86f1 text-decoration-none dropdown-toggle"
+                       id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://github.com/mdo.png" alt="hugenerd" width=70" height="70"
+                             class="rounded-circle">
+                        <span style="color: #ef86f1;font-size: 30px" class="d-none d-sm-inline mx-1">loser</span>
+                    </a>
+
+                </div>
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
+                     style="background-color:lavenderblush; border-top: 4px solid lavenderblush">
+                    <a href="/"
+                       class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline" style="color:#ef86f1 ">Menu</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                        id="menu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link align-middle px-0">
+                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-speedometer2"></i> <span
+                                    class="ms-1 d-none d-sm-inline">Dashboard</span>
+                            </a>
+                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    </li>
+
+                    </ul>
+                    <hr>
+
+                </div>
+            </div>
+            <div class="col py-3">
+                <!--Content area...-->
+                <div style="width:460px; height:580px; border:1px solid red; float:left; margin:5% 5% 0% 5%">
+                    첫번째 영역:
+                    왼쪽에 위치시킴 => float:left
+                    오른쪽에 바깥여백을 줌 => margin-right:10px;
+                    여기에 그림이나 글자 또는 광고 등을 넣음
+                </div>
+                <div style="width:460px; height:580px; border:1px solid green; float:left;margin:5% 5% 0% 5%">
+                    두번째 영역:
+                    첫번째 영역 옆에 나란히 붙임 => float:left
+                    여기에 그림이나 글자 또는 광고 등을 넣음
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--사이드바-->
+    <div class="footer">
+        <footer>
+            <nav>
+                <a href='https://backendjun.tistory.com' target='_blank'>Blog</a> |
+                <a href='https://github.com/PHJ1216' target='_blank'>Github</a>
+            </nav>
+            <p>
+                <span>저자 : ParkHyeonJun</span><br/>
+                <span>이메일 :phjapark@naver.com</span><br/>
+                <span>Copyright 2023. ParkHyeonJun. All Rights Reserved.</span>
+            </p>
+        </footer>
+    </div>
+</div>
+</body>
+</html>
